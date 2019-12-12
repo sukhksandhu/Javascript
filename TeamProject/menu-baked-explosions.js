@@ -1,6 +1,8 @@
 jQuery(document).ready(function(){
+
+  
 // cakes section javascript
-    $('#list-cake li,#list-donuts li').hover(
+    $('#list-cake li,#list-donuts li,#list-pastry li').hover(
 		function(){$(this).css('background','white');},
 		function(){$(this).css('background','#D0ECC5');}
 			
@@ -10,7 +12,12 @@ jQuery(document).ready(function(){
       function(){$(this).css('background','#FFAAA5');}
         
       );
-      
+      $('#gluten-free').hover(
+        function(){$("#box").css("display","block");},
+        function(){$("#box").css("display","none");}
+          
+        );
+
      
     $("#cake1").hover(
     function()
@@ -66,12 +73,12 @@ jQuery(document).ready(function(){
             $("#macarons3").hover(
               function()
                 {
-                  $("#img-macarons").attr("src","images/mango.jpg").width(400);
+                  $("#img-macarons").attr("src","images/mango.jpg").width(200);
                   // $("#img-macarons").width(400);
                   //here i am changing the width also of mango macarons image because that was looking odd before
                 },
                 function(){
-                  $("#img-macarons").attr("src","images/macarons.jpg").width(300);
+                  $("#img-macarons").attr("src","images/macarons.jpg").width(100);
                 });
           //section donuts
           $("#donut1").hover(
@@ -86,10 +93,10 @@ jQuery(document).ready(function(){
           $("#donut2").hover(
             function()
               {
-                $("#img-donuts").attr("src","images/coconut.jpg").width(400);
+                $("#img-donuts").attr("src","images/coconut.jpg").width(200);
               },
               function(){
-                $("#img-donuts").attr("src","images/donuts.jpg").width(300);
+                $("#img-donuts").attr("src","images/donuts.jpg").width(100);
               });
           $("#donut3").hover(
             function()
@@ -124,7 +131,31 @@ jQuery(document).ready(function(){
               function(){
                 $("#img-cupcakes").attr("src","images/cupcake.jpg").css("border-radius","50%");
               });
-
+//pastry section
+          $("#pastry1").hover(
+            function()
+              {
+                $("#img-pastry").attr("src","images/spinach.jpg");
+              },
+              function(){
+                $("#img-pastry").attr("src","images/puffpastry.jpg");
+              });
+            $("#pastry2").hover(
+              function()
+                {
+                  $("#img-pastry").attr("src","images/vanillapastry.jpg");
+                },
+                function(){
+                  $("#img-pastry").attr("src","images/puffpastry.jpg");
+                });
+            $("#pastry3").hover(
+              function()
+                {
+                  $("#img-pastry").attr("src","images/bacon.jpg");
+                },
+                function(){
+                  $("#img-pastry").attr("src","images/puffpastry.jpg");
+                });
 
 
 
